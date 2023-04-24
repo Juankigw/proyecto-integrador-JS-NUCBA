@@ -1,0 +1,384 @@
+@keyframes escalar {
+    to{
+        scale: 1.1;
+    }
+    
+  }
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+  
+  }
+  body{
+      background-color: #797979;
+      color: aliceblue;
+      box-sizing: border-box;
+      min-width: 100%;
+      width: 100%;
+      min-height: 100%;
+  }
+  /* aqui comienza el header */
+  .header{
+      background-color: rgb(0, 0, 0);
+      height: 8vh;
+      display: flex;
+      z-index: 5;
+      position: fixed;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .logo img{
+      height: 7vh;
+  }
+  .navbar{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5vh;
+
+  }
+  .navbar li{
+    list-style: none;
+  }
+  .navbar li a{
+    text-decoration: none;
+  }
+
+  /* Aqui comienza la seccion hero */
+
+  .hero{
+    padding-top: 8vh;
+  }
+ 
+   /* Aqui comienza la seccion info */
+  
+  .section-info{
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-shadow: 1px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+  }
+  
+  /* Aqui comienza la seccion de imagenes */
+  
+  .Galeriadeimagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 50px;
+    background-color: rgb(237, 237, 237)
+  }
+  /* Aqui comienza la seccion Contactanos */
+  
+  .section-contacto{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+    padding-bottom: 10vh ;
+    background-color: rgb(36, 36, 36);
+    font-size: 6em;
+    color: #797979;
+  }
+  .div-contactanos{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .div-contactanos ul{
+    list-style:none;
+    margin-top: 5vh;
+  }
+  .contactanos-redes{
+    display: flex;
+    gap: 10px;
+  }
+  .contactanos-redes p{
+   font-size: 60px;
+   margin-top: 100px;
+  }
+  .contactanos-redes p:hover{
+    animation-name: escalar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  /* Aqui comienza la seccion del footer */
+  .section-footer{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+  }
+  .section-footer img{
+    width: 200px;
+  }
+  
+  /* Aqui comienza el login y registro*/
+  .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    gap: 20px;
+    height: 100%;
+    background-color: rgb(237, 237, 237);
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+  .login button{
+    margin-bottom: 12px;
+    color: blue;
+  }
+  .login-texto{
+    color:blue;
+  }
+  .login-formulario{
+    color: black;
+  }
+  
+  /* Aqui comienzan las medias querys */
+  
+  @media (max-width: 1280px) and (min-width:801px) {
+    .titulo h1{
+      font-size: 4em;
+    }
+    .titulo h2{
+      font-size: 1.5em;
+    }
+    .bar__btn {
+      font-size: 1.5em;
+    }
+    .hero{
+      flex-direction: column-reverse;
+    }
+    .frase{
+      width: 85%;
+    }
+    .section-tiposdemasajes h5{
+      font-size: 1em;
+    }
+    .card-text{
+      font-size: 1em;
+    }
+    .section-tiposdemasajes h2{
+      font-size: 2em;
+    }
+    .section-contacto{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 800px) and (min-width:641px){
+     .nav__menu {
+      top: 35vh;
+      }
+      .carousel-inner{
+      height: 480px;
+      width: 640px;
+      }
+      .titulo h1{
+        font-size: 4em;
+      }
+      .titulo h2{
+        font-size: 1.5em;
+      }
+      .bar__btn {
+        font-size: 1.5em;
+      }
+      .hero{
+        flex-direction: column-reverse;
+      }
+      .frase{
+        width: 85%;
+      }
+      .section-tiposdemasajes h5{
+        font-size: 0.8em;
+      }
+      .card-text{
+        font-size: 0.8em;
+      }
+      .section-tiposdemasajes h2{
+        font-size: 2em;
+      }
+      .section-contacto{
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar1{
+        flex-direction: column;
+        height: 100%;
+      }
+      
+  }
+  @media (max-width: 640px) and (min-width: 387px){
+    .navbar1{
+      flex-direction: column;
+      height: 100%;
+    }
+    .titulo h1{
+      font-size: 3em;
+      height: 100%;
+    }
+    .titulo h2{
+      font-size: 1em;
+      height: 100%;
+    }
+    .bar__btn {
+      font-size: 1em;
+    }
+    .nav__menu {
+      top: 29vh;
+    }
+    .hero{
+     flex-direction: column-reverse;
+    }
+    .frase{
+      width: 85%;
+      font-size: 1em;
+    }
+    .section-info{
+      font-size: 1em;
+    }
+    .section-tiposdemasajes h5{
+      font-size: 0.8em;
+    }
+    .card-text{
+      font-size: 0.8em;
+    }
+    .section-tiposdemasajes h2{
+      font-size: 2em;
+    }
+    .carousel-inner{
+      height: 480px;
+      width: 100%;
+    }
+    .section-contacto{
+      flex-direction: column;
+      align-items: center;
+    }
+    .div-mapa iframe{
+      width: 100%;
+    }
+  }
+  @media (max-width: 386px) and (min-width:270px){
+    .navbar1{
+      flex-direction: column;
+      height: 100%;
+    }
+    .titulo h1{
+      font-size: 2em;
+      height: 100%;
+    }
+    .titulo h2{
+      font-size: 0.8em;
+      height: 100%;
+    }
+    .bar__btn {
+      font-size: 0.8em;
+    }
+    .nav__menu {
+      top: 25vh;
+    }
+    .nav__menu li a {
+      font-size: 0.8em;
+    }
+    .hero{
+     flex-direction: column-reverse;
+    }
+    .frase{
+      width: 85%;
+      font-size: 1em;
+    }
+    .section-info{
+      font-size: 1em;
+    }
+    .section-tiposdemasajes h5{
+      font-size: 0.8em;
+    }
+    .card-text{
+      font-size: 0.8em;
+    }
+    .section-tiposdemasajes h2{
+      font-size: 2em;
+    }
+    .carousel-inner{
+      height: 480px;
+      width: 100%;
+    }
+    .section-contacto{
+      flex-direction: column;
+      align-items: center;
+    }
+    .div-mapa iframe{
+      width: 80%;
+    }
+  }
+  @media (max-width: 269px){
+    .navbar1{
+      flex-direction: column;
+      height: 100%;
+    }
+    .titulo h1{
+      font-size: 1.5em;
+      height: 100%;
+    }
+    .titulo h2{
+      font-size: 1em;
+      height: 100%;
+    }
+    .nav__menu {
+      top: 29vh;
+    }
+    .nav__menu li a {
+      font-size: 0.8em;
+    }
+    .hero{
+     flex-direction: column-reverse;
+    }
+    .frase{
+      width: 85%;
+      font-size: 0.8em;
+    }
+    .section-info{
+      font-size: 0.8em;
+    }
+    .section-tiposdemasajes h5{
+      font-size: 0.5em;
+    }
+    .card-text{
+      font-size: 0.5em;
+    }
+    .section-tiposdemasajes h2{
+      font-size: 1em;
+    }
+    .carousel-inner{
+      height: 480px;
+      width: 100%;
+    }
+    .section-contacto{
+      flex-direction: column;
+      align-items: center;
+    }
+    .div-mapa iframe{
+      width: 80%;
+    }
+    .div-contactanos h4{
+      font-size: 0.15em;
+    }
+  }

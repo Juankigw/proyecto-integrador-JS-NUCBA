@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./bootstrap-5.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
+    <title>Login</title>
+</head>
+<body>
+      <header class="header">
+        <div class="logo">
+          <img src="./imagenes/logo.png" alt="logo de PC Store CBA">
+      </div>
+        <nav class="navbar">
+                <li><a class="navbar-link" href="./index.html">Home</a></li>
+                <li><a class="navbar-link" href="./registro.html">Registrate</a></li>
+                <li><a class="navbar-link" href="./login.html">Login</a></li>
+                <li><a class="navbar-link" href="#contactanos">Contactanos</a></li>
+                <a class="navbar-link" href=""><i class="fa-solid fa-cart-shopping cart-icon"></i></a> 
+        </nav>
+      </header>
+      <section class="login">
+        <div class="login-texto">
+            <h2>Login</h2>
+        </div>
+        <div class="login-formulario">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Direccion de e-mail</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+                </div>
+                <button type="submit" class="btn btn-outline-danger btn-lg">Enviar</button>
+                <p><a href=""> ¿Has olvidado tu contraseña?</a></p>
+                <p>¿No tienes cuenta? <a href="Registro.html">Registrate aqui</a></p>
+              </form>
+        </div>
+         </section>
+        <section class="section-contacto" id="contactanos">
+          <div class="div-contactanos">
+              <h2>Contactanos</h2>
+              <ul>
+                  <li><h4><i class="fa-solid fa-location-dot"></i> Blas pascal, Córdoba, Argentina.</h4></li>
+                  <li><h4><i class="fa-solid fa-envelope"></i> Juanki_gw@yahoo.com.ar</h4></li>
+                  <li><h4><i class="fa-brands fa-whatsapp"></i> 3514089063</h4></li>
+              </ul>
+              <ul class="contactanos-redes">
+                  <li><p><a href="#"><i class="fa-brands fa-instagram"></i></a></h3></i></li>
+                  <li><p><a href="#"><i class="fa-brands fa-facebook"></i></a></h3></i></li>
+                  <li><p><a href="#"><i class="fa-brands fa-twitter"></i></a></h3></i></li>
+              </ul>
+          </div>
+          <div class="div-mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.1854541435046!2d-64.25745658431399!3d-31.353861200368858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329ebabf730b3d%3A0x796a29b596396923!2sBlas%20Pascal%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1676088165798!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+          </div>
+      </section>
+      <footer class="section-footer">
+          <img class="logo" src="./imagenes/logo.png" alt="Logo de PC Store CBA">
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="./bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
