@@ -91,7 +91,34 @@
     width: 14rem;
     object-fit: fill;
   }
+  /* Aqui comienza la seccion productos */
+
+  .filter-wrapper {
+    margin-bottom: 20px;
+  }
+  .productos h2{
+    margin-bottom: 30px;
+  }
+  .productos nav{
+    margin-bottom: 30px;
+  }
+  .productos label {
+    display: inline-block;
+    margin-right: 10px;
+  }
   
+  .productos select {
+    background-color: #0c3256;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  .productos select:focus {
+    outline: none;
+  }
+
   /* Aqui comienza la seccion Contactanos */
   
   .section-contacto{
@@ -189,6 +216,11 @@ color: blue;
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
+}
+/* Aqui comienzan las clases para la funcionaldiad de JS */
+
+.hidden{
+  display: none;
 }
 
   /* Aqui comienzan las medias querys */

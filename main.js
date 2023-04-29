@@ -1,5 +1,6 @@
 const products= document.querySelector(".products-container");
-
+const filterSelect = document.getElementById('filter');
+const btnload= document.getElementById("btn-load")
 
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -31,14 +32,48 @@ const renderFilteredProducts= (category) =>{
 }
 
 const renderProducts= (index=0, category=undefined)=>{
-    if (!category) {
+    if (category === "all" || !category) {
         renderDividedProducts(index);
         return; 
     }
-    renderFilteredProducts(category)
+    renderFilteredProducts(category);
+}
+
+const changeShowMore=(category) =>{
+    if (category === "all") {
+        btnload.classList.remove("hidden");
+        return
+    }
+    btnload.classList.add("hidden");
+}
+const filterProducts = ()=>{
+    const selectedValue = filterSelect.value;
+    changeShowMore(selectedValue);
+    if (selectedValue === 'all') {
+        products.innerHTML = "";
+        renderProducts();
+    } else {
+        renderProducts(0, selectedValue);
+        productsController.nextProductsIndex=1
+    }
+}
+const isLastIndex =()=>{
+    return (
+        productsController.nextProductsIndex === productsController.productsLimit
+    )
+}
+const ShowMoreProducts= ()=>{
+    renderProducts(productsController.nextProductsIndex);
+    productsController.nextProductsIndex++;
+    if (isLastIndex()) {
+        btnload.classList.add("hidden")
+    }
+
 }
 const init = ()=>{
     renderProducts();
+    filterSelect.addEventListener('change', filterProducts);
+    btnload.addEventListener("click", ShowMoreProducts);
 }
 
 init();
