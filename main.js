@@ -10,7 +10,7 @@ const saveLocalStorage= (carList)=>{
 const renderproduct = (product)=>{
     const {name, marca, precio, img } = product
     return `
-    <div class="producto">
+    <div class="card-producto">
           <img  src="${img}"/>
           <h2>${name}</h2>
           <p class="precio">$${precio}</p>
