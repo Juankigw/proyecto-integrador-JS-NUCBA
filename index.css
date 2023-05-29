@@ -33,11 +33,11 @@
       color: blue;
       text-shadow: 1px 1px rgb(63, 61, 61);
   }
-  .logo img{
+  .logo {
       height: 7vh;
   }
-  .navbar{
-    width: 35%;
+  .navbar, .navbar-list {
+    width: 50%;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -52,6 +52,152 @@
     text-decoration: none;
   }
 
+  .menu-label {
+    display: none;
+  }
+  .cart {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    padding: 50px 30px;
+    background: blue;
+    border-left: black;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    z-index: 2;
+    min-width: 375px;
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  }
+  
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /*OCULTAR BARRA DE SCROLL DEL CARRITO*/
+
+.cart::-webkit-scrollbar {
+  display: none;
+}
+
+.cart h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #2323234e;
+  padding: 20px;
+  border: black;
+  border-radius: 10px;
+}
+
+.cart-item img {
+  height: 65px;
+  width: 65px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
+}
+
+.item-title {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item-bid {
+  color: white;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.item-precio {
+  background: linear-gradient(to right, #30cfd0, #c43ad6);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.item-handler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quantity-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+}
+
+.item-quantity {
+  color: grey;
+}
+
+.up {
+  border: black;
+}
+
+.down {
+  background-color: blue;
+  border: black;
+}
+
+.divider {
+  margin-top: 20px;
+  border: black;
+  width: 100%;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.cart-total p {
+  color: white;
+  font-weight: 700;
+}
+
+.cart-total span {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*Toggle del carro*/
+.open-cart {
+  transform: translate(0%);
+  transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+}
+
+.empty-msg {
+  color: grey;
+  font-size: 14px;
+}
   /* Aqui comienza la seccion hero */
 
   .hero{
@@ -191,7 +337,7 @@
 
 .products-container{
   display: flex;
-  gap: 10px;
+  gap: 40px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
@@ -270,6 +416,32 @@
 .vermas button:hover {
   background-color: #0D47A1;
 }
+.btn-buy,
+.btn-delete {
+  cursor: pointer;
+  padding: 10px 35px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s all ease-out;
+  background-color: black;
+}
+
+
+.btn-buy,
+.btn-delete {
+  width: 100%;
+}
+
+.btn-delete {
+  border: black;
+  background-color: transparent;
+}
+
+.btn-delete:hover {
+  background: blueviolet;
+  transition: 0.3s all ease-in;
+}
 /* Aqui comienzan las clases para la funcionaldiad de JS */
 
 .hidden{
@@ -278,18 +450,66 @@
 
   /* Aqui comienzan las medias querys */
   
-  @media (max-width: 1280px) and (min-width:801px) {
-    
+  /* Tablet */
+@media (max-width: 992px) {
+  /*header*/
+
+  .navbar {
+    gap: 10px;
   }
-  @media (max-width: 800px) and (min-width:641px){
-     
+
+  .cart-icon {
+    border: 0px solid;
   }
-  @media (max-width: 640px) and (min-width: 387px){
-    
-    }
-  @media (max-width: 386px) and (min-width:270px){
-    
+
+  .navbar-list {
+    position: absolute;
+    top: 65px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    flex-direction: column;
+    background-color: var(--nav-bg);
+    border: 2px solid var(--electric);
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    align-items: flex-start;
+    padding: 45px 30px;
+    gap: 25px;
+    z-index: 2;
+    display: none;
   }
-  @media (max-width: 269px){
-   
+
+  .navbar-list a {
+    font-size: 18px;
   }
+
+  /* Mostramos el icono del menu */
+  .menu-label {
+    display: flex;
+    order: 2;
+    cursor: pointer;
+  }
+
+  .menu-label img {
+    height: 20px;
+    width: 25px;
+  }
+
+  .open-menu {
+    display: flex;
+  }
+}
+  /* Celu */
+@media (max-width: 576px) {
+  /* Modificar el carrito para celu*/
+  .cart {
+    left: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+  }
+}

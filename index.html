@@ -15,17 +15,40 @@
 <body>
     <body>
       <header class="header">
-        <div class="logo">  
-          <img src="./imagenes/logo.png" alt="logo de PC Store CBA">
-      </div>
-      <div>
+          <img src="./imagenes/logo.png" alt="logo de PC Store CBA" class="logo">
         <h1>PC Store CBA</h1>
-      </div>
         <nav class="navbar">
+          <div class="menu-label">
+            <img src="./imagenes/menu.png" alt="" class="menu-icon" />
+          </div>
+          <ul class="navbar-list">
                 <li><a class="navbar-link" href="">Home</a></li>
                 <li><a class="navbar-link" href="./login.html">Login-Registro</a></li>
                 <li><a class="navbar-link" href="#contactanos">Contactanos</a></li>
-                <a class="navbar-link" href=""><i class="fa-solid fa-cart-shopping cart-icon"></i></a> 
+              </ul>
+                <div class="cart-label">
+                <a><i class="fa-solid fa-cart-shopping cart-icon"></i></a> 
+               </div>
+                <div class="cart">
+
+                  <h2>Tus Productos</h2>
+          
+          
+                  <div class="cart-container">
+          
+                  </div>
+          
+                  <span class="divider"></span>
+          
+                  <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total">18.3 ETH</span>
+                  </div>
+                  <button class="btn-buy">Comprar</button>
+                  <button class="btn-delete">Vaciar carrito</button>
+                </div>
+          
+                <div class="overlay"></div>
         </nav>
       </header>
         <section class="hero">
